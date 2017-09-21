@@ -5,15 +5,15 @@
 
 在线阅读： https://tidus5.gitbooks.io/ryujin_cn/
 
-Github:https://github.com/tidus5/RyuJin_CN
+Github： https://github.com/tidus5/RyuJin_CN
 
 ---
 
 搬运自 http://dxlib.irisine.com/doku.php?id=ryushinroku_pro_doc
 
-DX Library 中文WIKI:http://dxlib.irisine.com/doku.php?id=dxlibrary
+DX Library 中文WIKI： http://dxlib.irisine.com/doku.php?id=dxlibrary
 
-四圣龙神录官网：http://dixq.net/rp/index.html
+四圣龙神录官网： http://dixq.net/rp/index.html
 
 ---
 
