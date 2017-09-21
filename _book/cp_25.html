@@ -1,0 +1,1530 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第二十五章 为Boss加上碰撞判定吧 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="cp_26.html" />
+    
+    
+    <link rel="prev" href="cp_24.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="pro_doc.html">
+            
+                <a href="pro_doc.html">
+            
+                    
+                    首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="powered.html">
+            
+                <a href="powered.html">
+            
+                    
+                    版权申明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">教程目录索引</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="cp_0.html">
+            
+                <a href="cp_0.html">
+            
+                    
+                    序章
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="cp_1.html">
+            
+                <a href="cp_1.html">
+            
+                    
+                    第一章 准备好项目和素材吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="cp_2.html">
+            
+                <a href="cp_2.html">
+            
+                    
+                    第二章 首先我们来执行一下吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="cp_3.html">
+            
+                <a href="cp_3.html">
+            
+                    
+                    第三章 注意一下对全局变量的处理吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="cp_4.html">
+            
+                <a href="cp_4.html">
+            
+                    
+                    第四章 试试描绘角色吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="cp_5.html">
+            
+                <a href="cp_5.html">
+            
+                    
+                    第五章 琢磨一下声明的方式吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="cp_6.html">
+            
+                <a href="cp_6.html">
+            
+                    
+                    第六章 控制一下在主循环中调用的函数吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="cp_7.html">
+            
+                <a href="cp_7.html">
+            
+                    
+                    第七章 让我们把面板显示出来吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="cp_8.html">
+            
+                <a href="cp_8.html">
+            
+                    
+                    第八章 对游戏的输入进行反馈吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="cp_9.html">
+            
+                <a href="cp_9.html">
+            
+                    
+                    第九章 试着控制一下角色的移动吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="cp_10.html">
+            
+                <a href="cp_10.html">
+            
+                    
+                    第十章 来显示敌人吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="cp_11.html">
+            
+                <a href="cp_11.html">
+            
+                    
+                    第十一章 使用Excel来设置敌人出现的数据吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="cp_12.html">
+            
+                <a href="cp_12.html">
+            
+                    
+                    第十二章 设置许多敌人的运动模式吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="cp_13.html">
+            
+                <a href="cp_13.html">
+            
+                    
+                    第十三章 让敌人射出子弹吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="cp_14.html">
+            
+                <a href="cp_14.html">
+            
+                    
+                    第十四章 来制作各种各样的弹幕数据吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="cp_15.html">
+            
+                <a href="cp_15.html">
+            
+                    
+                    第十五章 制作yooo～梦的弹幕吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="cp_16.html">
+            
+                <a href="cp_16.html">
+            
+                    
+                    第十六章 来制作诹访子大人的弹幕吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="cp_17.html">
+            
+                <a href="cp_17.html">
+            
+                    
+                    第十七章 让自机射出子弹吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="cp_18.html">
+            
+                <a href="cp_18.html">
+            
+                    
+                    第十八章 为自机的射击添上碰撞判定吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="cp_19.html">
+            
+                <a href="cp_19.html">
+            
+                    
+                    第十九章 给敌人加上消灭特效吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.21" data-path="cp_20.html">
+            
+                <a href="cp_20.html">
+            
+                    
+                    第二十章 试着描绘背景吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.22" data-path="cp_21.html">
+            
+                <a href="cp_21.html">
+            
+                    
+                    第二十一章 为自机加上碰撞判定和无敌处理吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.23" data-path="cp_22.html">
+            
+                <a href="cp_22.html">
+            
+                    
+                    第二十二章 让自机放出Boom吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.24" data-path="cp_23.html">
+            
+                <a href="cp_23.html">
+            
+                    
+                    第二十三章 试着做出决死吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.25" data-path="cp_24.html">
+            
+                <a href="cp_24.html">
+            
+                    
+                    第二十四章 来制作Boss吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.26" data-path="cp_25.html">
+            
+                <a href="cp_25.html">
+            
+                    
+                    第二十五章 为Boss加上碰撞判定吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.27" data-path="cp_26.html">
+            
+                <a href="cp_26.html">
+            
+                    
+                    第二十六章 为Boss加上特效吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.28" data-path="cp_27.html">
+            
+                <a href="cp_27.html">
+            
+                    
+                    第二十七章 制作弹幕——“沉默的圣奈”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.29" data-path="cp_28.html">
+            
+                <a href="cp_28.html">
+            
+                    
+                    第二十八章 制作弹幕——“完美冻结”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.30" data-path="cp_29.html">
+            
+                <a href="cp_29.html">
+            
+                    
+                    第二十九章 制作弹幕——“恋之迷路”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.31" data-path="cp_30.html">
+            
+                <a href="cp_30.html">
+            
+                    
+                    第三十章 制作弹幕——小小青蛙不畏风雨
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.32" data-path="cp_31.html">
+            
+                <a href="cp_31.html">
+            
+                    
+                    第三十一章 制作弹幕——早苗风格☆状弹幕
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.33" data-path="cp_32.html">
+            
+                <a href="cp_32.html">
+            
+                    
+                    第三十二章 练习“之后就一个人都没有了吗？”风格的弹幕吧！（1）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.34" data-path="cp_33.html">
+            
+                <a href="cp_33.html">
+            
+                    
+                    第三十三章 练习“之后就一个人都没有了吗？”风格的弹幕吧！（2）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.35" data-path="cp_34.html">
+            
+                <a href="cp_34.html">
+            
+                    
+                    第三十四章 试着制作激光吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.36" data-path="cp_35.html">
+            
+                <a href="cp_35.html">
+            
+                    
+                    第三十五章 制作弹幕——“反魂蝶~八分咲~”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.37" data-path="cp_36.html">
+            
+                <a href="cp_36.html">
+            
+                    
+                    第三十六章 来仿制“深弹幕结界”吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.38" data-path="cp_37.html">
+            
+                <a href="cp_37.html">
+            
+                    
+                    第三十七章 把警告给消除了吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.39" data-path="cp_38.html">
+            
+                <a href="cp_38.html">
+            
+                    
+                    第三十八章 来绘制Stage Title吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.40" data-path="cp_39.html">
+            
+                <a href="cp_39.html">
+            
+                    
+                    第三十九章 让敌人掉落道具吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.41" data-path="cp_40.html">
+            
+                <a href="cp_40.html">
+            
+                    
+                    第四十章 追加道具获得的处理吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.42" data-path="cp_ex_1.html">
+            
+                <a href="cp_ex_1.html">
+            
+                    
+                    番外篇第一章 ~兴致来潮追加的小游戏~
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.43" data-path="cp_41.html">
+            
+                <a href="cp_41.html">
+            
+                    
+                    第四十一章 试着进行Score面板的显示吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.44" data-path="cp_42.html">
+            
+                <a href="cp_42.html">
+            
+                    
+                    第四十二章 试着制作闪屏（Flash）特效吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.45" data-path="cp_ex_2.html">
+            
+                <a href="cp_ex_2.html">
+            
+                    
+                    番外篇第二章~与音乐共舞的弹幕
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.46" data-path="cp_43.html">
+            
+                <a href="cp_43.html">
+            
+                    
+                    第四十三章 准确地控制FPS吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.47" data-path="cp_44.html">
+            
+                <a href="cp_44.html">
+            
+                    
+                    第四十四章 制作支持DEBUG的函数吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.48" data-path="cp_45.html">
+            
+                <a href="cp_45.html">
+            
+                    
+                    第四十五章 实现道中和最终Boss吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.49" data-path="cp_46.html">
+            
+                <a href="cp_46.html">
+            
+                    
+                    第四十六章 整理一下绘制函数的参数吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.50" data-path="cp_47.html">
+            
+                <a href="cp_47.html">
+            
+                    
+                    第四十七章 来制作一面吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.51" data-path="cp_48.html">
+            
+                <a href="cp_48.html">
+            
+                    
+                    第四十八章 试着加上音乐吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.52" data-path="cp_49.html">
+            
+                <a href="cp_49.html">
+            
+                    
+                    第四十九章 为自机的射击加上Option吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.53" data-path="cp_50.html">
+            
+                <a href="cp_50.html">
+            
+                    
+                    第五十章 增加自动追踪的功能吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">扩展部分</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="cp_ex_3.html">
+            
+                <a href="cp_ex_3.html">
+            
+                    
+                    番外篇第三章~试着完成弹幕——“正直者之死”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="cp_51.html">
+            
+                <a href="cp_51.html">
+            
+                    
+                    第五十一章 来制作完成汉字弹幕的工具吧（1）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="cp_52.html">
+            
+                <a href="cp_52.html">
+            
+                    
+                    第五十二章 来制作完成汉字弹幕的工具吧（2）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="cp_53.html">
+            
+                <a href="cp_53.html">
+            
+                    
+                    第五十三章 试着制作汉字弹幕吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="cp_54.html">
+            
+                <a href="cp_54.html">
+            
+                    
+                    第五十四章 图像→弹幕 试着制作变换工具吧（1）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="cp_55.html">
+            
+                <a href="cp_55.html">
+            
+                    
+                    第五十五章 图像→弹幕 试着制作变换工具吧（2）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="cp_56.html">
+            
+                <a href="cp_56.html">
+            
+                    
+                    第五十六章 试着制作图像弹幕吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="cp_57.html">
+            
+                <a href="cp_57.html">
+            
+                    
+                    第五十七章 试着制作3D背景吧（1）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="cp_58.html">
+            
+                <a href="cp_58.html">
+            
+                    
+                    第五十八章 试着制作3D背景吧（2）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="cp_59.html">
+            
+                <a href="cp_59.html">
+            
+                    
+                    第五十九章 试着制作3D背景吧（3）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="cp_60.html">
+            
+                <a href="cp_60.html">
+            
+                    
+                    第六十章 在游戏中试着使用3D背景吧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="cp_post.html">
+            
+                <a href="cp_post.html">
+            
+                    
+                    译者后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="cp_moving.html">
+            
+                <a href="cp_moving.html">
+            
+                    
+                    搬运后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第二十五章 为Boss加上碰撞判定吧</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x4E8C;&#x5341;&#x4E94;&#x7AE0;-&#x4E3A;boss&#x52A0;&#x4E0A;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x5427;">&#x7B2C;&#x4E8C;&#x5341;&#x4E94;&#x7AE0; &#x4E3A;Boss&#x52A0;&#x4E0A;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x5427;</h1>
+<p><a href="pro_doc.html">&gt;&gt;&#x70B9;&#x6B64;&#x56DE;&#x5230;&#x6559;&#x7A0B;&#x76EE;&#x5F55;</a></p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x4E3A;Boss&#x52A0;&#x4E0A;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x4E3A;Boss&#x7684;&#x5B50;&#x5F39;&#x52A0;&#x4E0A;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x5427;&#x3002;</p>
+<p>&#x540C;&#x65F6;&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#x6211;&#x4EEC;&#x4E5F;&#x52A0;&#x4E0A;&#x5728;&#x524D;&#x9762;&#x4E00;&#x76F4;&#x5FD8;&#x8BB0;&#x7684;&#x89D2;&#x8272;&#x7684;&#x88C5;&#x9970;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x524D;&#x9762;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x7528;FILED_MAX_X&#x6765;&#x5B9A;&#x4E49;&#x533A;&#x57DF;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;&#x4E0D;&#x8FC7;&#x5199;&#x8D77;&#x6765;&#x5F88;&#x9EBB;&#x70E6;&#xFF08;&#x6C57;&#xFF09;</p>
+<blockquote>
+<p>FIELD_MAX_X &#x2192; FMX</p>
+<p>FIELD_MAX_Y &#x2192; FMY</p>
+<p>FIELD_X &#x2192; FX</p>
+<p>FIELD_Y &#x2192; FY</p>
+</blockquote>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x505A;&#x4E86;&#x4EE5;&#x4E0A;&#x53D8;&#x66F4;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x5148;&#x4E8B;&#x5148;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x8BF4;&#x8BF4;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x7684;&#x8BDD;&#x9898;&#x3002;</p>
+<p>&#x5728;&#x524D;&#x9762;&#x7684;&#x7AE0;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5199;&#x4E86;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5728;&#x90A3;&#x4E2A;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x8BF4;&#x8FC7;&#x6211;&#x4EEC;&#x540E;&#x9762;&#x6765;&#x6CDB;&#x7528;&#x5316;&#x5730;&#x5199;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x8BF7;&#x548C;&#x524D;&#x9762;&#x7684;&#x51FD;&#x6570;&#x5BF9;&#x6BD4;&#x8D77;&#x6765;&#x770B;&#x3002;</p>
+<p>&#x8FDB;&#x884C;&#x4EE5;&#x4E0B;&#x53D8;&#x66F4;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//&#x5C04;&#x51FB;&#x7684;&#x5750;&#x6807;&#xFF1A;1 &#x8FDB;&#x884C;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x7684;&#x7269;&#x4F53;&#xFF1A;2</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">out_judge</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x1, <span class="hljs-keyword">double</span> y1, <span class="hljs-keyword">double</span> x2, <span class="hljs-keyword">double</span> y2,
+                          <span class="hljs-keyword">double</span> range1, <span class="hljs-keyword">double</span> range2, <span class="hljs-keyword">double</span> spd1,<span class="hljs-keyword">double</span> angle1)</span></span>{
+    <span class="hljs-keyword">int</span> j;
+    <span class="hljs-keyword">double</span> x=x1-x2;<span class="hljs-comment">//&#x654C;&#x4EBA;&#x548C;&#x81EA;&#x673A;&#x5C04;&#x51FB;&#x7684;&#x5B50;&#x5F39;&#x7684;&#x8DDD;&#x79BB;</span>
+    <span class="hljs-keyword">double</span> y=y1-y2;
+    <span class="hljs-comment">//&#x654C;&#x4EBA;&#x7684;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x548C;&#x81EA;&#x673A;&#x53CC;&#x8272;&#x673A;&#x7684;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x7684;&#x5408;&#x8BA1;&#x8303;&#x56F4;</span>
+    <span class="hljs-keyword">double</span> r=range1+range2;
+    <span class="hljs-comment">//&#x5982;&#x679C;&#x6709;&#x5FC5;&#x8981;&#x8BA1;&#x7B97;&#x4E2D;&#x95F4;&#x90E8;&#x5206;</span>
+    <span class="hljs-keyword">if</span>(spd1&gt;r){
+        <span class="hljs-comment">//&#x4FDD;&#x5B58;1&#x5E27;&#x4EE5;&#x524D;&#x7684;&#x4F4D;&#x7F6E;</span>
+        <span class="hljs-keyword">double</span> pre_x=x1+<span class="hljs-built_in">cos</span>(angle1+PI)*spd1;
+        <span class="hljs-keyword">double</span> pre_y=y1+<span class="hljs-built_in">sin</span>(angle1+PI)*spd1;
+        <span class="hljs-keyword">double</span> px,py;
+        <span class="hljs-keyword">for</span>(j=<span class="hljs-number">0</span>;j&lt;spd1/r;j++){<span class="hljs-comment">//&#x524D;&#x8FDB;&#x90E8;&#x5206;&#xF7;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x90E8;&#x5206;&#x6B21;&#x5FAA;&#x73AF;</span>
+            px=pre_x-x2;
+            py=pre_y-y2;
+            <span class="hljs-keyword">if</span>(px*px+py*py&lt;r*r)
+                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+            pre_x+=<span class="hljs-built_in">cos</span>(angle1)*r;
+            pre_y+=<span class="hljs-built_in">sin</span>(angle1)*r;
+        }
+    }
+    <span class="hljs-keyword">if</span>(x*x+y*y&lt;r*r)<span class="hljs-comment">//&#x5982;&#x679C;&#x5728;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x5185;&#x7684;&#x8BDD;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<span class="hljs-comment">//&#x78B0;&#x649E;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x76F4;&#x5230;&#x4E0A;&#x4E2A;&#x7AE0;&#x8282;&#x4E3A;&#x6B62;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x4E3A;&#x6BCF;&#x4E2A;&#x53D8;&#x91CF;&#x90FD;&#x5199;&#x4E00;&#x6B21;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x6B21;&#x6211;&#x4EEC;&#x4F7F;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x80FD;&#x5BF9;&#x4EFB;&#x4F55;&#x53D8;&#x91CF;&#x90FD;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x3002;</p>
+<p>&#x53EA;&#x9700;&#x8981;&#x53D8;&#x66F4;&#x8981;&#x5904;&#x7406;&#x7684;&#x53C2;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x7B97;&#x6CD5;&#x548C;&#x5904;&#x7406;&#x7684;&#x5185;&#x5BB9;&#x5B8C;&#x5168;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#x3002;</p>
+<p>&#x8FD9;&#x662F;&#x5C04;&#x51FB;&#x7684;&#x5B50;&#x5F39;&#x548C;&#x7269;&#x4F53;&#x662F;&#x5426;&#x78B0;&#x649E;&#x7684;&#x5224;&#x5B9A;&#x51FD;&#x6570;&#xFF0C;</p>
+<p>x1&#xFF0C;y1&#x7B49;&#x6709;&#x201C;1&#x201D;&#x7684;&#x53C2;&#x6570;&#x8868;&#x793A;&#x5C04;&#x51FB;&#x7684;&#x4FE1;&#x606F;
+x2&#xFF0C;y2&#x7B49;&#x6709;&#x201C;2&#x201D;&#x7684;&#x53C2;&#x6570;&#x8868;&#x793A;&#x7269;&#x4F53;&#x7684;&#x4FE1;&#x606F;&#x3002;
+&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#xFF0C;&#x6211;&#x4EEC;&#x5728;out&#x6587;&#x4EF6;&#x4E2D;&#x8FDB;&#x884C;&#x66FF;&#x6362;&#x3002;</p>
+<p>&#x2014;- out.cpp &#x53D8;&#x66F4; &#x2014;-</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;../include/GV.h&quot;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ENEMY_RANGE_MAX 4</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CSHOT_RANGE_MAX 2</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CRANGE 2.0</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BRANGE 40.0</span>
+
+<span class="hljs-comment">//&#x654C;&#x4EBA;&#x7684;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x8303;&#x56F4;</span>
+<span class="hljs-keyword">int</span> enemy_range[ENEMY_RANGE_MAX]={<span class="hljs-number">16</span>,<span class="hljs-number">30</span>,<span class="hljs-number">16</span>,<span class="hljs-number">50</span>};
+<span class="hljs-comment">//&#x81EA;&#x673A;&#x8BBE;&#x8BA1;&#x7684;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x8303;&#x56F4;</span>
+<span class="hljs-keyword">int</span> cshot_range[CSHOT_RANGE_MAX]={<span class="hljs-number">6</span>,};
+
+<span class="hljs-comment">//&#x78B0;&#x649E;&#x5224;&#x5B9A;</span>
+<span class="hljs-comment">//&#x5C04;&#x51FB;&#x7684;&#x5750;&#x6807;&#xFF1A;1 &#x8FDB;&#x884C;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x7684;&#x7269;&#x4F53;&#xFF1A;2</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">out_judge</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x1, <span class="hljs-keyword">double</span> y1, <span class="hljs-keyword">double</span> x2, <span class="hljs-keyword">double</span> y2,
+              <span class="hljs-keyword">double</span> range1, <span class="hljs-keyword">double</span> range2, <span class="hljs-keyword">double</span> spd1,<span class="hljs-keyword">double</span> angle1)</span></span>{
+    <span class="hljs-keyword">int</span> j;
+    <span class="hljs-keyword">double</span> x=x1-x2;<span class="hljs-comment">//&#x654C;&#x4EBA;&#x548C;&#x81EA;&#x673A;&#x5C04;&#x51FB;&#x7684;&#x5B50;&#x5F39;&#x7684;&#x8DDD;&#x79BB;</span>
+    <span class="hljs-keyword">double</span> y=y1-y2;
+    <span class="hljs-comment">//&#x654C;&#x4EBA;&#x7684;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x548C;&#x81EA;&#x673A;&#x8BBE;&#x8BA1;&#x7684;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x7684;&#x5408;&#x8BA1;&#x8303;&#x56F4;</span>
+    <span class="hljs-keyword">double</span> r=range1+range2;
+<span class="hljs-comment">//&#x5982;&#x679C;&#x6709;&#x5FC5;&#x8981;&#x8BA1;&#x7B97;&#x4E2D;&#x95F4;&#x7684;&#x8BDD;</span>
+    <span class="hljs-keyword">if</span>(spd1&gt;r){
+        <span class="hljs-comment">//&#x8BB0;&#x5F55;1&#x5E27;&#x4E4B;&#x524D;&#x7684;&#x4F4D;&#x7F6E;</span>
+        <span class="hljs-keyword">double</span> pre_x=x1+<span class="hljs-built_in">cos</span>(angle1+PI)*spd1;
+        <span class="hljs-keyword">double</span> pre_y=y1+<span class="hljs-built_in">sin</span>(angle1+PI)*spd1;
+        <span class="hljs-keyword">double</span> px,py;
+        <span class="hljs-keyword">for</span>(j=<span class="hljs-number">0</span>;j&lt;spd1/r;j++){<span class="hljs-comment">//&#x524D;&#x8FDB;&#x90E8;&#x5206;&#xF7;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x90E8;&#x5206;&#x6B21;&#x5FAA;&#x73AF;</span>
+            px=pre_x-x2;
+            py=pre_y-y2;
+            <span class="hljs-keyword">if</span>(px*px+py*py&lt;r*r)
+                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+            pre_x+=<span class="hljs-built_in">cos</span>(angle1)*r;
+            pre_y+=<span class="hljs-built_in">sin</span>(angle1)*r;
+        }
+    }
+    <span class="hljs-keyword">if</span>(x*x+y*y&lt;r*r)<span class="hljs-comment">//&#x5982;&#x679C;&#x5728;&#x78B0;&#x649E;&#x5224;&#x5B9A;&#x5185;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<span class="hljs-comment">//&#x78B0;&#x649E;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">//&#x5224;&#x65AD;&#x654C;&#x4EBA;&#x548C;&#x81EA;&#x673A;&#x5C04;&#x51FB;&#x662F;&#x5426;&#x78B0;&#x4E0A;</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">out_judge_cshot</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i,<span class="hljs-keyword">int</span> s)</span></span>{
+    <span class="hljs-keyword">if</span>(cshot[i].cnt&gt;<span class="hljs-number">0</span>){ <span class="hljs-comment">//&#x5C04;&#x51FB;&#x7684;&#x5B50;&#x5F39;&#x7684;&#x8F68;&#x9053;&#x5982;&#x679C;&#x81F3;&#x5C11;&#x8BA1;&#x7B97;&#x8FC7;&#x4E00;&#x6B21;</span>
+        <span class="hljs-keyword">if</span>(out_judge(cshot[i].x,cshot[i].y,enemy[s].x,enemy[s].y,
+            cshot_range[cshot[i].knd],enemy_range[enemy[s].knd],
+            cshot[i].spd,cshot[i].angle)){
+                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">//&#x5224;&#x5B9A;Boss&#x662F;&#x5426;&#x548C;&#x81EA;&#x673A;&#x5C04;&#x51FB;&#x78B0;&#x649E;</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">out_judge_cshot_boss</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span></span>{
+    <span class="hljs-keyword">if</span>(cshot[i].cnt&gt;<span class="hljs-number">0</span>){<span class="hljs-comment">//&#x5982;&#x679C;&#x5C04;&#x51FB;&#x7684;&#x5B50;&#x5F39;&#x7684;&#x8F68;&#x9053;&#x81F3;&#x5C11;&#x8BA1;&#x7B97;&#x8FC7;&#x4E00;&#x6B21;</span>
+        <span class="hljs-keyword">if</span>(out_judge(cshot[i].x,cshot[i].y,boss.x,boss.y,
+            cshot_range[cshot[i].knd],BRANGE,cshot[i].spd,cshot[i].angle)){
+                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">//&#x5224;&#x5B9A;&#x81EA;&#x673A;&#x662F;&#x5426;&#x548C;&#x654C;&#x4EBA;&#x5C04;&#x51FB;&#x78B0;&#x4E0A;</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">out_judge_enemyshot</span><span class="hljs-params">(<span class="hljs-keyword">int</span> s,<span class="hljs-keyword">int</span> n)</span></span>{
+    <span class="hljs-keyword">if</span>(shot[s].bullet[n].cnt&gt;<span class="hljs-number">0</span>){<span class="hljs-comment">//&#x5982;&#x679C;&#x5C04;&#x51FB;&#x7684;&#x5B50;&#x5F39;&#x7684;&#x8F68;&#x9053;&#x81F3;&#x5C11;&#x8BA1;&#x7B97;&#x8FC7;&#x4E00;&#x6B21;</span>
+        <span class="hljs-keyword">if</span>(out_judge(
+            shot[s].bullet[n].x,shot[s].bullet[n].y,ch.x,ch.y,
+            bullet_info[shot[s].bullet[n].knd].range,CRANGE,
+            shot[s].bullet[n].spd,shot[s].bullet[n].angle
+            )){
+                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">//&#x662F;&#x5426;&#x81EA;&#x673A;&#x662F;&#x5426;&#x548C;Boss&#x5C04;&#x51FB;&#x78B0;&#x4E0A;</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">out_judge_bossshot</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span></span>{
+    <span class="hljs-keyword">if</span>(boss_shot.bullet[n].cnt&gt;<span class="hljs-number">0</span>){<span class="hljs-comment">//&#x5C04;&#x51FB;&#x7684;&#x5B50;&#x5F39;&#x7684;&#x8F68;&#x9053;&#x81F3;&#x5C11;&#x8BA1;&#x7B97;&#x8FC7;&#x4E00;&#x6B21;&#x7684;&#x8BDD;</span>
+        <span class="hljs-keyword">if</span>(out_judge(
+            boss_shot.bullet[n].x,boss_shot.bullet[n].y,ch.x,ch.y,
+            bullet_info[boss_shot.bullet[n].knd].range,CRANGE,
+            boss_shot.bullet[n].spd,boss_shot.bullet[n].angle
+            )){
+                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">extern</span> <span class="hljs-keyword">void</span> <span class="hljs-title">enter_del_effect</span><span class="hljs-params">(<span class="hljs-keyword">int</span>)</span></span>;
+
+<span class="hljs-comment">//&#x5224;&#x5B9A;&#x654C;&#x4EBA;&#x662F;&#x5426;&#x51FB;&#x6BC1;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">enemy_death_judge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> s)</span></span>{
+    <span class="hljs-keyword">int</span> i;
+    se_flag[<span class="hljs-number">8</span>]=<span class="hljs-number">1</span>;<span class="hljs-comment">//&#x78B0;&#x4E0A;&#x654C;&#x4EBA;&#x7684;&#x58F0;&#x97F3;</span>
+    <span class="hljs-keyword">if</span>(enemy[s].hp&lt;<span class="hljs-number">0</span>){<span class="hljs-comment">//&#x654C;&#x4EBA;&#x7684;HP&#x5C0F;&#x4E8E;0&#x7684;&#x8BDD;</span>
+        enemy[s].flag=<span class="hljs-number">0</span>;<span class="hljs-comment">//&#x6D88;&#x706D;&#x654C;&#x4EBA;</span>
+        se_flag[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<span class="hljs-comment">//&#x654C;&#x4EBA;&#x7684;&#x51FB;&#x6BC1;&#x58F0;</span>
+        enter_del_effect(s);
+        <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;SHOT_MAX;i++){<span class="hljs-comment">//&#x654C;&#x4EBA;&#x603B;&#x6570;&#x6B21;&#x5FAA;&#x73AF;</span>
+            <span class="hljs-keyword">if</span>(shot[i].flag!=<span class="hljs-number">0</span>){<span class="hljs-comment">//&#x5982;&#x679C;&#x6709;&#x767B;&#x5F55;&#x4E86;&#x7684;&#x5F39;&#x5E55;&#x6570;&#x636E;</span>
+                <span class="hljs-keyword">if</span>(s==shot[i].num){<span class="hljs-comment">//&#x5982;&#x679C;&#x654C;&#x4EBA;&#x6709;&#x5DF2;&#x7ECF;&#x767B;&#x5F55;&#x7684;&#x5F39;&#x5E55;&#x7684;&#x8BDD;</span>
+                    shot[i].flag=<span class="hljs-number">2</span>;<span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x5F39;&#x5E55;&#x4E0D;&#x518D;&#x7EE7;&#x7EED;</span>
+                    <span class="hljs-keyword">break</span>;
+                }
+            }
+        }
+    }
+}
+
+<span class="hljs-comment">//&#x8BA9;s&#x53F7;&#x654C;&#x4EBA;&#x627F;&#x53D7;power&#x4F24;&#x5BB3;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">hit_enemy</span><span class="hljs-params">(<span class="hljs-keyword">int</span> s,<span class="hljs-keyword">int</span> power)</span></span>{
+    enemy[s].hp-=power;<span class="hljs-comment">//&#x51CF;&#x5C11;&#x5B50;&#x5F39;&#x6240;&#x6301;&#x6709;&#x7684;power&#x91CF;&#x7684;HP</span>
+    enemy_death_judge(s);<span class="hljs-comment">//&#x51B3;&#x5B9A;&#x654C;&#x4EBA;&#x662F;&#x5426;&#x51FB;&#x6BC1;</span>
+}
+
+<span class="hljs-comment">//&#x8BA9;Boss&#x627F;&#x53D7;power&#x4F24;&#x5BB3;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">hit_boss</span><span class="hljs-params">(<span class="hljs-keyword">int</span> power)</span></span>{
+    boss.hp-=power;<span class="hljs-comment">//&#x8BA9;HP&#x51CF;&#x5C11;&#x5B50;&#x5F39;&#x6240;&#x6301;&#x6709;&#x7684;power&#x7684;&#x91CF;&#x7684;</span>
+}
+
+
+<span class="hljs-comment">//&#x81EA;&#x673A;&#x5C04;&#x51FB;&#x548C;&#x654C;&#x4EBA;&#x7684;&#x5904;&#x7406;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cshot_and_enemy</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> i,s;
+    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;CSHOT_MAX;i++){<span class="hljs-comment">//&#x81EA;&#x673A;&#x5C04;&#x51FB;&#x7684;&#x5B50;&#x5F39;&#x603B;&#x6570;</span>
+        <span class="hljs-keyword">if</span>(cshot[i].flag&gt;<span class="hljs-number">0</span>){
+            <span class="hljs-keyword">for</span>(s=<span class="hljs-number">0</span>;s&lt;ENEMY_MAX;s++){<span class="hljs-comment">//&#x654C;&#x4EBA;&#x603B;&#x6570;</span>
+                <span class="hljs-keyword">if</span>(enemy[s].flag&gt;<span class="hljs-number">0</span>){
+                    <span class="hljs-keyword">if</span>(out_judge_cshot(i,s)){<span class="hljs-comment">//&#x5982;&#x679C;&#x81EA;&#x673A;&#x5C04;&#x51FB;&#x7684;&#x5B50;&#x5F39;&#x548C;&#x654C;&#x4EBA;&#x78B0;&#x4E0A;</span>
+                        cshot[i].flag=<span class="hljs-number">0</span>;<span class="hljs-comment">//&#x5C06;&#x81EA;&#x5DF1;&#x5B50;&#x5F39;&#x9500;&#x6BC1;</span>
+                        hit_enemy(s,cshot[i].power);
+                        <span class="hljs-keyword">break</span>;
+                    }
+                }
+            }
+            <span class="hljs-comment">//Boss&#x51FA;&#x73B0;&#x4E14;&#x5176;&#x4E0D;&#x63CF;&#x7ED8;flag&#x4E3A;&#x65E0;&#x6548;&#x4E14;&#x5728;&#x5C04;&#x51FB;&#x4E2D;</span>
+            <span class="hljs-keyword">if</span>(boss.flag==<span class="hljs-number">1</span> &amp;&amp; boss.graph_flag==<span class="hljs-number">0</span> &amp;&amp; boss.state==<span class="hljs-number">2</span>){
+                <span class="hljs-keyword">if</span>(out_judge_cshot_boss(i)){
+                    cshot[i].flag=<span class="hljs-number">0</span>;
+                    hit_boss(cshot[i].power);
+                }
+            }
+        }
+    }
+}
+
+<span class="hljs-comment">//&#x654C;&#x4EBA;&#x5C04;&#x51FB;&#x548C;&#x81EA;&#x673A;&#x7684;&#x5904;&#x7406;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">enemyshot_and_ch</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> s,n;
+    <span class="hljs-comment">//&#x6742;&#x5175;&#x7684;&#x5C04;&#x51FB;</span>
+    <span class="hljs-keyword">for</span>(s=<span class="hljs-number">0</span>;s&lt;SHOT_MAX;s++){<span class="hljs-comment">//&#x654C;&#x4EBA;&#x7684;&#x5C04;&#x51FB;&#x7684;&#x5B50;&#x5F39;&#x603B;&#x6570;</span>
+        <span class="hljs-keyword">if</span>(shot[s].flag&gt;<span class="hljs-number">0</span>){<span class="hljs-comment">//&#x5982;&#x679C;&#x5C04;&#x51FB;&#x5DF2;&#x7ECF;&#x767B;&#x5F55;</span>
+            <span class="hljs-keyword">for</span>(n=<span class="hljs-number">0</span>;n&lt;SHOT_BULLET_MAX;n++){<span class="hljs-comment">//&#x5B50;&#x5F39;&#x603B;&#x6570;</span>
+                <span class="hljs-keyword">if</span>(shot[s].bullet[n].flag==<span class="hljs-number">1</span>){<span class="hljs-comment">//&#x5982;&#x679C;&#x5B50;&#x5F39;&#x5DF2;&#x7ECF;&#x767B;&#x5F55;&#x7684;&#x8BDD;</span>
+                    <span class="hljs-keyword">if</span>(out_judge_enemyshot(s,n)==<span class="hljs-number">1</span>){<span class="hljs-comment">//&#x4E14;&#x81EA;&#x673A;&#x4E0E;&#x5B50;&#x5F39;&#x63A5;&#x89E6;</span>
+                        shot[s].bullet[n].flag=<span class="hljs-number">0</span>;<span class="hljs-comment">//&#x9500;&#x6BC1;&#x5B50;&#x5F39;</span>
+                        <span class="hljs-keyword">if</span>(ch.flag==<span class="hljs-number">0</span> &amp;&amp; ch.mutekicnt==<span class="hljs-number">0</span>){
+                            ch.cnt=<span class="hljs-number">0</span>;
+                            ch.flag=<span class="hljs-number">1</span>;
+                            se_flag[<span class="hljs-number">3</span>]=<span class="hljs-number">1</span>;
+                        }
+                    }
+                }
+            }
+        }
+    }
+<span class="hljs-comment">//Boss&#x5C04;&#x51FB;</span>
+    <span class="hljs-keyword">if</span>(boss_shot.flag&gt;<span class="hljs-number">0</span>){<span class="hljs-comment">//&#x5982;&#x679C;&#x5C04;&#x51FB;&#x5DF2;&#x7ECF;&#x767B;&#x5F55;</span>
+        <span class="hljs-keyword">for</span>(n=<span class="hljs-number">0</span>;n&lt;BOSS_BULLET_MAX;n++){<span class="hljs-comment">//&#x5B50;&#x5F39;&#x603B;&#x6570;</span>
+            <span class="hljs-keyword">if</span>(boss_shot.bullet[n].flag==<span class="hljs-number">1</span>){<span class="hljs-comment">//&#x5982;&#x679C;&#x5B50;&#x5F39;&#x5DF2;&#x7ECF;&#x767B;&#x5F55;</span>
+                <span class="hljs-keyword">if</span>(out_judge_bossshot(n)==<span class="hljs-number">1</span>){<span class="hljs-comment">//&#x5982;&#x679C;&#x5B50;&#x5F39;&#x5DF2;&#x7ECF;&#x548C;&#x81EA;&#x673A;&#x63A5;&#x89E6;</span>
+                    boss_shot.bullet[n].flag=<span class="hljs-number">0</span>;<span class="hljs-comment">//&#x9500;&#x6BC1;&#x5B50;&#x5F39;</span>
+                    <span class="hljs-keyword">if</span>(ch.flag==<span class="hljs-number">0</span> &amp;&amp; ch.mutekicnt==<span class="hljs-number">0</span>){
+                        ch.cnt=<span class="hljs-number">0</span>;
+                        ch.flag=<span class="hljs-number">1</span>;
+                        se_flag[<span class="hljs-number">3</span>]=<span class="hljs-number">1</span>;
+                    }
+                }
+            }
+        }
+    }
+}
+
+<span class="hljs-comment">//&#x8BA9;&#x654C;&#x4EBA;&#x627F;&#x53D7;Boom&#x7684;&#x4F24;&#x5BB3;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cbom_and_enemy</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> s;
+    <span class="hljs-keyword">if</span>(bom.flag!=<span class="hljs-number">1</span>)<span class="hljs-keyword">return</span>;
+    <span class="hljs-keyword">for</span>(s=<span class="hljs-number">0</span>;s&lt;ENEMY_MAX;s++){<span class="hljs-comment">//&#x654C;&#x4EBA;&#x603B;&#x6570;</span>
+        <span class="hljs-keyword">if</span>(enemy[s].flag&gt;<span class="hljs-number">0</span>)<span class="hljs-comment">//&#x5982;&#x679C;&#x654C;&#x4EBA;&#x662F;&#x5B58;&#x5728;&#x7684;</span>
+            hit_enemy(s,ch.power/<span class="hljs-number">20</span>);<span class="hljs-comment">//&#x7ED9;&#x4E88;&#x4F24;&#x5BB3;</span>
+    }
+<span class="hljs-comment">//Boss&#x5B58;&#x5728;&#x4E14;&#x5176;&#x4E0D;&#x7ED8;&#x5236;flag&#x4E3A;&#x65E0;&#x6548;&#x4E14;&#x5728;&#x5C04;&#x51FB;&#x4E2D;</span>
+    <span class="hljs-keyword">if</span>(boss.flag==<span class="hljs-number">1</span> &amp;&amp; boss.graph_flag==<span class="hljs-number">0</span> &amp;&amp; boss.state==<span class="hljs-number">2</span>)
+        hit_boss(ch.power/<span class="hljs-number">20</span>);<span class="hljs-comment">//&#x627F;&#x53D7;&#x4F24;&#x5BB3;</span>
+}
+
+<span class="hljs-comment">//&#x78B0;&#x649E;&#x5224;&#x5B9A;main</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">out_main</span><span class="hljs-params">()</span></span>{
+    cbom_and_enemy();<span class="hljs-comment">//&#x4F7F;&#x654C;&#x4EBA;&#x627F;&#x53D7;Boom&#x7684;&#x4F24;&#x5BB3;</span>
+    cshot_and_enemy();<span class="hljs-comment">//&#x81EA;&#x673A;&#x5C04;&#x51FB;&#x548C;&#x654C;&#x4EBA;&#x7684;&#x5904;&#x7406;</span>
+    enemyshot_and_ch();<span class="hljs-comment">//&#x654C;&#x4EBA;&#x5C04;&#x51FB;&#x548C;&#x81EA;&#x673A;&#x7684;&#x5904;&#x7406;</span>
+}
+</code></pre>
+<p>&#x867D;&#x7136;&#x4EE3;&#x7801;&#x6709;&#x70B9;&#x957F;&#xFF0C;&#x4E0D;&#x8FC7;&#x57FA;&#x672C;&#x4E0A;&#x6765;&#x770B;&#xFF0C;Boss&#x7684;&#x5904;&#x7406;&#x53EA;&#x662F;&#x653E;&#x5728;&#x548C;&#x6742;&#x5175;&#x4E00;&#x6837;&#x7684;&#x5904;&#x7406;&#x91CC;&#x9762;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x6784;&#x9020;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x5176;&#x6B21;&#xFF0C;&#x5728;&#x9F99;&#x795E;&#x5F55;&#x4E2D;SC(&#x8F6C;&#x8F7D;&#x8005;&#x6CE8;&#xFF1A;SpellCard&#xFF0C;&#x5373;&#x7B26;&#x5361;&#xFF0C;&#x5F39;&#x5E55;&#x96C6;)&#x7684;&#x5F39;&#x5E55;&#x7684;&#x65F6;&#x5019;&#x8FD8;&#x4F1A;&#x53D8;&#x5316;&#x80CC;&#x666F;&#x5462;&#x3002;</p>
+<p>&#x5728;&#x4EC0;&#x4E48;&#x5F39;&#x5E55;&#x7684;&#x65F6;&#x5019;&#x6709;&#x4EC0;&#x4E48;&#x6837;&#x5B50;&#x7684;&#x80CC;&#x666F;&#xFF0C;&#x4E3A;&#x4E86;&#x8BBE;&#x5B9A;&#x8FD9;&#x4E00;&#x70B9;&#x6211;&#x4EEC;&#x4E3A;Boss&#x589E;&#x52A0;back_knd&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5728;ini&#x4E2D;&#x628A;&#x6240;&#x6709;&#x7684;SC&#x90FD;&#x51C6;&#x5907;&#x597D;&#x5427;&#x3002;</p>
+<p>&#x2014;-&#x5728; ini.cpp ini()&#x4E2D;&#x8FDB;&#x884C;&#x53D8;&#x66F4;&#x3001;&#x8FFD;&#x52A0; &#x2014;-</p>
+<pre><code class="lang-cpp">        boss.appear_count[<span class="hljs-number">0</span>]=<span class="hljs-number">50</span>;<span class="hljs-comment">//&#x4E2D;&#x8DEF;Boss&#x51FA;&#x73B0;&#x7684;&#x65F6;&#x523B;</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;DANMAKU_MAX;i++){<span class="hljs-comment">//&#x5404;&#x81EA;&#x5F39;&#x5E55;&#x7684;HP</span>
+                boss.set_hp[i]=<span class="hljs-number">10000</span>;
+                boss.hp_max=<span class="hljs-number">10000</span>;
+        }
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;DANMAKU_MAX;i++)<span class="hljs-comment">//&#x5F39;&#x5E55;&#x7684;&#x5404;&#x81EA;&#x80CC;&#x666F;&#x79CD;&#x7C7B;</span>
+                boss.back_knd[i]=<span class="hljs-number">1</span>;
+</code></pre>
+<p>&#x53D8;&#x91CF;&#x548C;&#x7ED3;&#x6784;&#x4F53;&#x4E5F;&#x4E8B;&#x5148;&#x5B9A;&#x4E49;&#x3002;</p>
+<p>&#x2014;-&#x5728; struct.h &#x4E2D;&#x8FFD;&#x52A0; &#x2014;-</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//Boos&#x7684;&#x4FE1;&#x606F;</span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>{
+        <span class="hljs-keyword">int</span> flag,cnt,knd,wtime,state,endtime,hagoromo,graph_flag;
+        <span class="hljs-keyword">int</span> hp,hp_max;
+        <span class="hljs-keyword">int</span> appear_count[<span class="hljs-number">2</span>],set_hp[DANMAKU_MAX],back_knd[DANMAKU_MAX];
+        <span class="hljs-keyword">double</span> x,y,ang,spd;
+        <span class="hljs-keyword">phy_t</span> phy;
+}<span class="hljs-keyword">boss_t</span>;
+</code></pre>
+<p>&#x2014;-&#x5728; define.h &#x4E2D;&#x8FDB;&#x884C;&#x4EE5;&#x4E0B;&#x53D8;&#x66F4; &#x2014;-</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//&#x533A;&#x57DF;&#x7684;&#x5C3A;&#x5BF8;</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FMX 384</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FMY 448</span>
+<span class="hljs-comment">//&#x533A;&#x57DF; &#x5DE6;&#x4E0A;&#x89D2;&#x5750;&#x6807;</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FX 32</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FY 16</span>
+</code></pre>
+<p>&#x2014;-&#x5728; GV.h &#x4E2D;&#x8FFD;&#x52A0; &#x2014;-</p>
+<pre><code class="lang-cpp">GLOBAL <span class="hljs-keyword">int</span> img_chetc[<span class="hljs-number">10</span>];       <span class="hljs-comment">//&#x548C;&#x89D2;&#x8272;&#x76F8;&#x5173;&#x7684;&#x5176;&#x5B83;&#x56FE;&#x50CF;</span>
+GLOBAL <span class="hljs-keyword">int</span> img_etc[<span class="hljs-number">50</span>];<span class="hljs-comment">//&#x5176;&#x5B83;&#x56FE;&#x50CF;</span>
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x5728;etc&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x548C;&#x89D2;&#x8272;&#x7684;&#x88C5;&#x9970;&#x3001;Boss&#x7684;HP&#x8868;&#x793A;&#x76F8;&#x5173;&#x7684;&#x56FE;&#x50CF;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x5B83;&#x4EEC;&#x8BFB;&#x53D6;&#x51FA;&#x6765;&#x7136;&#x540E;&#x7ED8;&#x5236;&#x3002;</p>
+<p>&#x2014;-&#x5728; load.cpp &#x7684;load&#x51FD;&#x6570;&#x4E2D;&#x8FFD;&#x52A0; &#x2014;-</p>
+<pre><code class="lang-cpp">        img_chetc[<span class="hljs-number">0</span>]    = LoadGraph( <span class="hljs-string">&quot;../dat/img/char/atari.png&quot;</span> );<span class="hljs-comment">//&#x78B0;&#x649E;&#x5224;&#x5B9A;</span>
+        img_chetc[<span class="hljs-number">2</span>]    = LoadGraph( <span class="hljs-string">&quot;../dat/img/char/ball.png&quot;</span> );<span class="hljs-comment">//&#x7403;</span>
+
+        img_etc[<span class="hljs-number">1</span>]      = LoadGraph( <span class="hljs-string">&quot;../dat/img/enemy/hp.png&quot;</span> );
+        img_etc[<span class="hljs-number">7</span>]      = LoadGraph( <span class="hljs-string">&quot;../dat/img/enemy/hp_boss.png&quot;</span> );<span class="hljs-comment">//Boos &#x7684;HP</span>
+</code></pre>
+<p>&#x2014;-&#x5728; graph.cpp&#x4E2D;&#x8FFD;&#x52A0;&#x3001;&#x53D8;&#x66F4; &#x2014;-</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//&#x7ED8;&#x5236;Boss</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">graph_boss</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">int</span> i;
+        <span class="hljs-keyword">if</span>(boss.flag==<span class="hljs-number">0</span>)<span class="hljs-keyword">return</span>;
+        DrawRotaGraphF(boss.x+FX+dn.x,boss.y+FY+dn.y,<span class="hljs-number">1.0f</span>,<span class="hljs-number">0.0f</span>,img_dot_riria[<span class="hljs-number">0</span>],TRUE);
+        <span class="hljs-keyword">if</span>(boss.hp_max==<span class="hljs-number">0</span>){printfDx(<span class="hljs-string">&quot;graph_boss&#x7684;0%\n&quot;</span>);<span class="hljs-keyword">return</span>;}
+        <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;FMX*<span class="hljs-number">0.98</span>*boss.hp/boss.hp_max;i++){
+                <span class="hljs-keyword">if</span>(boss.back_knd[boss.knd]==<span class="hljs-number">1</span>)
+                        DrawGraph(<span class="hljs-number">3</span>+FX+i+dn.x,<span class="hljs-number">2</span>+FY+dn.y,img_etc[<span class="hljs-number">7</span>],FALSE);
+                <span class="hljs-keyword">else</span>
+                        DrawGraph(<span class="hljs-number">3</span>+FX+i+dn.x,<span class="hljs-number">2</span>+FY+dn.y,img_etc[<span class="hljs-number">1</span>],FALSE);
+        }
+}
+
+<span class="hljs-comment">//&#x81EA;&#x673A;&#x7ED8;&#x5236;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">graph_ch</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">double</span> sx,sy,ny=(<span class="hljs-built_in">sin</span>(<span class="hljs-number">2.0</span>*PI*(count%<span class="hljs-number">50</span>)/<span class="hljs-number">50</span>)*<span class="hljs-number">3</span>),ang=<span class="hljs-number">2.0</span>*PI*(count%<span class="hljs-number">120</span>)/<span class="hljs-number">120</span>;
+
+        <span class="hljs-keyword">if</span>(CheckStatePad(configpad.slow)&gt;<span class="hljs-number">0</span>)<span class="hljs-comment">//&#x5982;&#x679C;&#x4F4E;&#x901F;&#x79FB;&#x52A8;&#x4E2D;</span>
+                sx=<span class="hljs-number">15</span>,sy=<span class="hljs-number">15</span>+ny;<span class="hljs-comment">//&#x62C9;&#x8FD1;</span>
+        <span class="hljs-keyword">else</span>
+                sx=<span class="hljs-number">30</span>,sy=<span class="hljs-number">30</span>+ny;<span class="hljs-comment">//&#x5F80;&#x666E;&#x901A;&#x7684;&#x4F4D;&#x7F6E;&#x79FB;&#x52A8;</span>
+
+        DrawRotaGraphF( ch.x-sx+FX, ch.y+sy+FY, <span class="hljs-number">1.0f</span>,  ang, img_chetc[<span class="hljs-number">2</span>], TRUE );
+        DrawRotaGraphF( ch.x+sx+FX, ch.y+sy+FY, <span class="hljs-number">1.0f</span>, -ang, img_chetc[<span class="hljs-number">2</span>], TRUE );
+
+        <span class="hljs-keyword">if</span>(ch.mutekicnt%<span class="hljs-number">2</span>==<span class="hljs-number">0</span>){<span class="hljs-comment">//&#x65E0;&#x654C;&#x4E2D;&#x7684;&#x8BDD;&#x4EAE;&#x706D;</span>
+                <span class="hljs-comment">//&#x81EA;&#x673A;&#x663E;&#x793A;</span>
+                DrawRotaGraphF(ch.x+FX+dn.x,ch.y+FY+dn.y,<span class="hljs-number">1.0f</span>,<span class="hljs-number">0.0f</span>,img_ch[<span class="hljs-number">0</span>][ch.img],TRUE);
+                <span class="hljs-keyword">if</span>(CheckStatePad(configpad.slow)&gt;<span class="hljs-number">0</span>)<span class="hljs-comment">//&#x5982;&#x679C;&#x4F4E;&#x901F;&#x79FB;&#x52A8;&#x4E2D;&#x7684;&#x8BDD;&#x663E;&#x793A;&#x51FA;&#x78B0;&#x649E;&#x5224;&#x5B9A;</span>
+                        DrawRotaGraphF( ch.x+FX, ch.y+FY, <span class="hljs-number">1.0f</span>, <span class="hljs-number">2.0</span>*PI*(count%<span class="hljs-number">120</span>)/<span class="hljs-number">120</span>, img_chetc[<span class="hljs-number">0</span>], TRUE );
+        }
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6765;&#x7ED8;&#x5236;SC&#x7528;&#x7684;&#x80CC;&#x666F;&#x3002;</p>
+<p>boos.knd&#x7684;&#x6307;&#x793A;&#x7F16;&#x53F7;boos.back_knd&#x5728;1&#x7684;&#x65F6;&#x5019;&#x8868;&#x793A;SC&#xFF0C;&#x8FD9;&#x4E00;&#x7AE0;&#x4E2D;&#x6211;&#x4EEC;&#x5168;&#x90E8;&#x7F6E;&#x4E3A;1.</p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x80CC;&#x666F;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x7ED8;&#x5236;&#xFF0C;&#x8BA9;&#x5B83;&#x4E00;&#x7247;&#x6F06;&#x9ED1;&#x3002;</p>
+<p>&#x2014;- graph_back.cpp &#x53D8;&#x66F4; &#x2014;-</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;../include/GV.h&quot;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">graph_back00</span><span class="hljs-params">()</span></span>{<span class="hljs-comment">//&#x901A;&#x5E38;&#x80CC;&#x666F;</span>
+        SetDrawArea( <span class="hljs-number">32</span> , <span class="hljs-number">16</span> , <span class="hljs-number">416</span> , <span class="hljs-number">464</span> ) ;<span class="hljs-comment">//&#x8BBE;&#x5B9A;&#x7ED8;&#x5236;&#x53EF;&#x80FD;&#x7684;&#x533A;&#x57DF;</span>
+        DrawGraph(FX,count%<span class="hljs-number">700</span>+FY<span class="hljs-number">-700</span>,img_back[<span class="hljs-number">0</span>],FALSE);
+        DrawGraph(FX,count%<span class="hljs-number">700</span>+FY    ,img_back[<span class="hljs-number">0</span>],FALSE);
+        SetDrawArea( <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">640</span>, <span class="hljs-number">480</span>);<span class="hljs-comment">//&#x8FD8;&#x539F;&#x533A;&#x57DF;</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">graph_back01</span><span class="hljs-params">()</span></span>{<span class="hljs-comment">//SC&#x7528;&#x80CC;&#x666F;</span>
+        SetDrawArea( <span class="hljs-number">32</span> , <span class="hljs-number">16</span> , <span class="hljs-number">416</span> , <span class="hljs-number">464</span> ) ;<span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x7ED8;&#x5236;&#x53EF;&#x80FD;&#x7684;&#x533A;&#x57DF;</span>
+
+        <span class="hljs-comment">//&#x5728;&#x8FD9;&#x91CC;&#x7ED8;&#x5236;SC&#x7528;&#x7684;&#x80CC;&#x666F;</span>
+
+        SetDrawArea( <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">640</span>, <span class="hljs-number">480</span>);<span class="hljs-comment">//&#x8FD8;&#x539F;&#x533A;&#x57DF;</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">graph_back_main</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-comment">//Boos&#x4E3A;&#x6709;&#x6548;&#x4E14;&#x5728;&#x653E;SC</span>
+        <span class="hljs-keyword">if</span>(boss.flag==<span class="hljs-number">1</span> &amp;&amp; boss.back_knd[boss.knd]==<span class="hljs-number">1</span>)
+                graph_back01();
+        <span class="hljs-keyword">else</span><span class="hljs-comment">//&#x9664;&#x6B64;&#x4E4B;&#x5916;</span>
+                graph_back00();
+}
+</code></pre>
+<p>&#x2014;- func.h &#x53D8;&#x66F4; &#x2014;-</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">extern</span> <span class="hljs-keyword">void</span> <span class="hljs-title">boss_shot_bulletH000</span><span class="hljs-params">()</span></span>;
+
+<span class="hljs-keyword">void</span> (*boss_shot_bullet[DANMAKU_MAX])() =
+{
+        boss_shot_bulletH000,
+        boss_shot_bulletH000,
+        boss_shot_bulletH000,
+        boss_shot_bulletH000,
+        boss_shot_bulletH000,
+        boss_shot_bulletH000,
+        boss_shot_bulletH000,
+};
+</code></pre>
+<p>&#x5728;func.h&#x4E2D;&#x5199;&#x5165;&#x5F39;&#x5E55;&#x60C5;&#x62A5;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EA;&#x505A;&#x4E86;H000&#x8FD9;&#x4E2A;&#x5F39;&#x5E55;&#xFF0C;&#x540E;&#x9762;&#x5728;&#x589E;&#x52A0;&#x5F39;&#x5E55;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E5F;&#x4F1A;&#x589E;&#x52A0;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#x5728;&#x8FD9;&#x91CC;&#x52A0;&#x5165;&#x7684;&#x51FD;&#x6570;&#x7684;&#x987A;&#x5E8F;&#x5C31;&#x662F;&#x5F39;&#x5E55;&#x7684;&#x987A;&#x5E8F;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x5728;&#x5F39;&#x5E55;&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x5019;&#x4ECE;0&#x53F7;&#x5F39;&#x5E55;&#x5F00;&#x59CB;&#x3002;</p>
+<p>7&#x6B21;&#x5F39;&#x5E55;&#x7ED3;&#x675F;&#x4E86;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x6307;&#x9488;&#x9519;&#x8BEF;&#x8BF7;&#x6CE8;&#x610F;&#x4E00;&#x4E0B;&#x3002;</p>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;</p>
+<hr>
+<embed src="http://player.youku.com/player.php/Type/Folder/Fid/23155717/Ob/1/sid/XODQxMzQwMjI0/v.swf" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" allowfullscreen="true" mode="transparent" type="application/x-shockwave-flash">
+
+<hr>
+<p><a href="pro_doc.html">&gt;&gt;&#x70B9;&#x6B64;&#x56DE;&#x5230;&#x6559;&#x7A0B;&#x76EE;&#x5F55;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="cp_24.html" class="navigation navigation-prev " aria-label="Previous page: 第二十四章 来制作Boss吧">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="cp_26.html" class="navigation navigation-next " aria-label="Next page: 第二十六章 为Boss加上特效吧">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第二十五章 为Boss加上碰撞判定吧","level":"2.26","depth":1,"next":{"title":"第二十六章 为Boss加上特效吧","level":"2.27","depth":1,"path":"cp_26.md","ref":"cp_26.md","articles":[]},"previous":{"title":"第二十四章 来制作Boss吧","level":"2.25","depth":1,"path":"cp_24.md","ref":"cp_24.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cp_25.md","mtime":"2017-09-20T12:48:45.985Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-21T04:06:18.099Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
