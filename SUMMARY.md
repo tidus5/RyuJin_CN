@@ -1,8 +1,8 @@
 # Summary
 
 * [简介](README.md)
-* [首页](pro_doc.md)
-* [版权申明](powered.md)
+* [首页](chapter/pro_doc.md)
+* [版权申明](chapter/powered.md)
 
 ## 教程目录索引
 * [序章](chapter/cp_0.md)
